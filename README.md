@@ -1,19 +1,43 @@
 # OpenAIMultiModel
 Deploys an Azure AI Service with multiple OpenAI models (Dall-E, GPT-4o, GPT-35-turbo)
 
-This scenario is relying on [Azure Developer CLI - AZD](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/) to run the deployment.
+This repo contains an AZD template which deploys an Azure AI Service with different OpenAI LLM models. The scenario can be deployed to Azure using the [Azure Developer CLI - AZD](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview). 
 
-If you already have AZD installed, run the following to initialize the scenario (=what this does is running a 'git clone' to download the deployment artifacts to your local development machine)
+💪 This template scenario is part of the larger **[Microsoft Trainer Demo Deploy Catalog](https://aka.ms/trainer-demo-deploy)**.
 
+## ⬇️ Installation
+- [Azure Developer CLI - AZD](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd)
+    - When installing AZD, the above the following tools will be installed on your machine as well, if not already installed:
+        - [GitHub CLI](https://cli.github.com)
+        - [Bicep CLI](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
+    - You need Owner or Contributor access permissions to an Azure Subscription to  deploy the scenario.
+
+## 🚀 Deploying the scenario in 4 steps:
+
+1. Create a new folder on your machine.
 ```
-azd init -t petender/OpenAIMultiModel
+mkdir petender/openaimultimodel
 ```
-
-Followed by:
-
+2. Next, navigate to the new folder.
+```
+cd petender/openaimultimodel
+```
+3. Next, run `azd init` to initialize the deployment.
+```
+azd init -t petender/openaimultimodel
+```
+4. Last, run `azd up` to trigger an actual deployment.
 ```
 azd up
-``` 
+```
 
-to trigger the actual deployment. You will be asked for your Azure subscription and desired location to deploy the Resource Group, Azure AI Service and the different AI models.
+⏩ Note: you can delete the deployed scenario from the Azure Portal, or by running ```azd down``` from within the initiated folder.
 
+## What is the demo scenario about?
+
+- Use the [demo guide](https://github.com/petender/azd-apimwithconfAPI/blob/main/demoguide/apimwithconference.md)) for inspiration for your demo
+
+## 💭 Feedback and Contributing
+Feel free to create issues for bugs, suggestions or Fork and create a PR with new demo scenarios or optimizations to the templates. 
+If you like the scenario, consider giving a GitHub ⭐
+ 
