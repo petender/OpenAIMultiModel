@@ -1,3 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
 
-name: open-aigpt4o
+name: tdd-azd-openaimultimodels
+metadata:
+    template: tdd-azd-openaimultimodels@1.11.0
+infra:
+   provider: "bicep"
