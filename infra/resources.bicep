@@ -57,7 +57,7 @@ module aiAccount 'br/public:avm/res/cognitive-services/account:0.9.0' = {
         model: {
           format: 'OpenAI'
           name: 'gpt-35-turbo'
-          version: '0301'
+          version: '0125'
         }
         name: 'gpt-35-turbo'
         sku: {
